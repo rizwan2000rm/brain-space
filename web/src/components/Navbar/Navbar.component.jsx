@@ -1,11 +1,42 @@
+import "./Navbar.styles.scss";
+
 const Navbar = () => {
   return (
-    <div className="container mx-auto">
-      <h1>Sort It</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-        exercitationem?
-      </p>
+    <div className="navbar">
+      <ul className="nav">
+        <li className="nav-brand">
+          <img
+            src="https://cabbage-dashboard.herokuapp.com/_nuxt/icons/icon_512.ee4a13.png"
+            alt=""
+            height="50"
+            width="50"
+          />
+        </li>
+        <li className="nav-item">
+          <img
+            src="https://cabbage-dashboard.herokuapp.com/_nuxt/icons/icon_512.ee4a13.png"
+            alt=""
+            height="35"
+            width="35"
+          />
+        </li>
+        <li className="nav-item">
+          <img
+            src="https://cabbage-dashboard.herokuapp.com/_nuxt/icons/icon_512.ee4a13.png"
+            alt=""
+            height="35"
+            width="35"
+          />
+        </li>
+        <li className="nav-item">
+          <img
+            src="https://cabbage-dashboard.herokuapp.com/_nuxt/icons/icon_512.ee4a13.png"
+            alt=""
+            height="35"
+            width="35"
+          />
+        </li>
+      </ul>
     </div>
   );
 };
