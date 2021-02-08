@@ -1,5 +1,6 @@
 import Nav from "./Nav";
 import Divider from "./Divider";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
       <Nav />
       <Divider />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };

@@ -1,30 +1,48 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Nav = () => {
+  const router = useRouter();
   return (
     <>
-      <h1 className="font-display font-extrabold text-3xl text-gray-500 m-4 tracking-tight">
+      <h1 className="font-display font-extrabold text-3xl text-gray-600 m-4 tracking-tight">
         Brainspace
       </h1>
       <nav>
         <ul className="flex flex-row text-sm font-medium text-white">
           <Link href="/">
-            <li className="bg-green-400 px-2.5 py-1 m-4 rounded-lg hover:bg-green-700 cursor-pointer">
+            <li
+              className={`link px-2.5 py-1 m-4 ${
+                router.pathname === "/" ? "active" : ""
+              }`}
+            >
               Home
             </li>
           </Link>
           <Link href="/library">
-            <li className="px-2.5 py-1 m-4 rounded-lg text-gray-500 hover:bg-green-400 hover:text-white cursor-pointer">
+            <li
+              className={`link px-2.5 py-1 m-4 ${
+                router.pathname === "/library" ? "active" : ""
+              }`}
+            >
               Library
             </li>
           </Link>
           <Link href="/wall">
-            <li className="px-2.5 py-1 m-4 rounded-lg text-gray-500 hover:bg-green-400 hover:text-white cursor-pointer">
+            <li
+              className={`link px-2.5 py-1 m-4 ${
+                router.pathname === "/wall" ? "active" : ""
+              }`}
+            >
               Wall
             </li>
           </Link>
           <Link href="/stocks">
-            <li className="px-2.5 py-1 m-4 rounded-lg text-gray-500 hover:bg-green-400 hover:text-white cursor-pointer">
+            <li
+              className={`link px-2.5 py-1 m-4 ${
+                router.pathname === "/stocks" ? "active" : ""
+              }`}
+            >
               Stocks
             </li>
           </Link>
