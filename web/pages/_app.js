@@ -6,7 +6,7 @@ import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div>
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </div>
   );
 }
 

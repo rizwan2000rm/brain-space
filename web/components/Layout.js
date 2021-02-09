@@ -1,17 +1,17 @@
 import Nav from "./Nav";
-import Divider from "./Divider";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <Nav />
-      <Divider />
+    <div className="flex justify-between h-screen">
+      <div className="w-2/3 border">
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </div>
       <Sidebar />
-      <main>{children}</main>
-      <Footer />
-    </>
+    </div>
   );
 };
 

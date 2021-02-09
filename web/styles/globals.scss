@@ -9,3 +9,15 @@
 .active {
   @apply bg-green-400 text-white rounded-lg hover:bg-green-700 cursor-pointer;
 }
+
+.border {
+  border-right: 25px solid;
+  border-image-source: linear-gradient(45deg, #34d399, #48cfd9);
+  border-image-slice: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

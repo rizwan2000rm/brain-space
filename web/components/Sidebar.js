@@ -1,6 +1,6 @@
 const Sidebar = () => {
   return (
-    <div className="fixed top-0 right-0 w-1/4 h-screen m-4">
+    <div className="w-1/3 m-4 flex flex-col p-8">
       <div className="flex justify-between">
         <h1 className="font-display text-lg text-gray-500">toastyhead</h1>
         <img
@@ -10,11 +10,11 @@ const Sidebar = () => {
           alt="profile"
         />
       </div>
-      <div className="fixed w-30 flex flex-col top-1/3 left-3/4">
-        <h1 className="text-gray-500 text-xl">
-          Lorem ipsum dolor sit amet consectetur.
+      <div className="mt-16">
+        <h1 className="text-gray-600 text-3xl font-bold">
+          Lorem ipsum dolor sit.
         </h1>
-        <p className="text-gray-400 text-sm mt-3">
+        <p className="text-gray-500 mt-6">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nostrum
           nulla, voluptatem odit expedita molestias?
         </p>
