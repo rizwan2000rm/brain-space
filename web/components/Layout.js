@@ -5,9 +5,9 @@ import Sidebar from "./Sidebar";
 const Layout = ({ children }) => {
   return (
     <div className="flex justify-between h-screen">
-      <div className="w-2/3 border">
+      <div className="w-3/5 border">
         <Nav />
-        <main>{children}</main>
+        <main className="pr-16">{children}</main>
         <Footer />
       </div>
       <Sidebar />

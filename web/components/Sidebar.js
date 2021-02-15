@@ -1,6 +1,6 @@
 const Sidebar = () => {
   return (
-    <div className="w-1/3 m-4 flex flex-col p-8">
+    <div className="w-2/5 m-4 flex flex-col p-8">
       <div className="flex justify-between">
         <h1 className="font-display text-lg text-gray-500">toastyhead</h1>
         <img
