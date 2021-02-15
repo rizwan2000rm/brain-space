@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .link {
   @apply rounded-lg text-gray-500 hover:bg-green-400 hover:text-white cursor-pointer;
 }
@@ -12,12 +18,6 @@
 
 .border {
   border-right: 25px solid;
-  border-image-source: linear-gradient(45deg, #34d399, #48cfd9);
+  border-image-source: linear-gradient(0deg, #34d399, #48cfd9);
   border-image-slice: 1;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }

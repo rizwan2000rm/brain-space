@@ -1,14 +1,12 @@
 import Nav from "./Nav";
-import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 
 const Layout = ({ children }) => {
   return (
     <div className="flex justify-between h-screen">
-      <div className="w-3/5 border">
+      <div className="w-3/5 border overflow-hidden">
         <Nav />
-        <main className="pr-16">{children}</main>
-        <Footer />
+        <main>{children}</main>
       </div>
       <Sidebar />
     </div>

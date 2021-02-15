@@ -1,16 +1,16 @@
 import WideCard from "../components/WideCard";
 
 const library = ({ library }) => {
-  // console.log(library);
-
   return (
     <div className="m-5 flex flex-wrap">
-      <WideCard />
-      <WideCard />
-      <WideCard />
-      <WideCard />
-      <WideCard />
-      <WideCard />
+      {Object.values(library.list).map((article) => (
+        <WideCard
+          title={article.resolved_title}
+          url={article.resolved_url}
+          image={article.top_image_url}
+          readTime={article.time_to_read}
+        />
+      ))}
     </div>
   );
 };
