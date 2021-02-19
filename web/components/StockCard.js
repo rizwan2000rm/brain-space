@@ -6,7 +6,7 @@ const StockCard = ({ company, logo, name }) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&apikey=***REMOVED***`
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&apikey=**DELETED**&outputsize=compact`
       );
       const data = await res.json();
       setStockData(data);
@@ -14,8 +14,6 @@ const StockCard = ({ company, logo, name }) => {
 
     fetchData();
   }, []);
-
-  console.log(stockData);
 
   return (
     <div className="m-5   relative flex flex-col w-56 h-52 shadow-2xl rounded-3xl p-6">
@@ -25,10 +23,20 @@ const StockCard = ({ company, logo, name }) => {
         </h1>
         <img className="h-8" src={`/icons8-${logo}.svg`} alt="" />
       </div>
-      <span className="text-green-400 text-2xl font-bold">$780.90</span>
-      <span className="text-red-400 text-lg font-bold mt-0">$787.38</span>
+      <span className="text-green-400 text-2xl font-bold">
+        {stockData
+          ? Object.values(stockData["Time Series (Daily)"])[0]["1. open"]
+          : null}
+      </span>
+      <span className="text-red-400 text-lg font-bold mt-0">
+        {stockData
+          ? Object.values(stockData["Time Series (Daily)"])[0]["4. close"]
+          : null}
+      </span>
       <span className="text-gray-500 text-sm font-bold self-end mt-2">
-        17957058
+        {stockData
+          ? Object.values(stockData["Time Series (Daily)"])[0]["5. volume"]
+          : null}
       </span>
       <span className="text-gray-500 text-sm self-end">2021-02-18</span>
     </div>
