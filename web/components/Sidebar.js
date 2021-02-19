@@ -11,13 +11,18 @@ const Sidebar = () => {
         />
       </div>
       <div className="mt-16">
-        <h1 className="text-gray-600 text-3xl font-bold">
-          Lorem ipsum dolor sit.
+        <h1 className="font-display text-gray-600 text-5xl font-bold">
+          Alan Turing
         </h1>
         <p className="text-gray-500 mt-6">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nostrum
-          nulla, voluptatem odit expedita molestias?
+          Sometimes it is the people no one can imagine anything of who do the
+          things no one can imagine
         </p>
+        <img
+          src="https://zpopk.pl/wp-content/uploads/2015/01/The-Imitation-Game-Movie-New-Pic-2.jpg"
+          alt=""
+          className="h-1/2 mt-6 rounded-lg"
+        />
       </div>
     </div>
   );
