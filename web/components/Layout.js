@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 const Layout = ({ children }) => {
   return (
     <div className="flex justify-between h-screen">
-      <div className="w-3/5 border overflow-hidden">
+      <div className="w-3/5 border">
         <Nav />
         <main>{children}</main>
       </div>
