@@ -6,9 +6,8 @@ import Pagination from "../components/Pagination";
 const library = ({ library }) => {
   const articles = Object.values(library.list);
 
-  const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [articlesPerPage, setArticlesPerPage] = useState(6);
+  const [articlesPerPage] = useState(6);
 
   // Get current Articles
   const indexOfLastPost = currentPage * articlesPerPage;
