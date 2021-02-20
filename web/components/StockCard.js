@@ -6,7 +6,7 @@ const StockCard = ({ company, logo, name }) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&apikey=**DELETED**&outputsize=compact`
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&apikey=${process.env.vantageAPI}&outputsize=compact`
       );
       const data = await res.json();
       setStockData(data);
